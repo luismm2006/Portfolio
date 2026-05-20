@@ -1,73 +1,178 @@
-# React + TypeScript + Vite
+# Portfolio — Luis Mula Márquez
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal desarrollado en **React + TypeScript**, con toda la información centralizada en un único archivo de contexto (`information.tsx`) distribuido a todos los componentes mediante la **Context API de React**, evitando prop drilling y manteniendo una separación limpia entre datos y presentación.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📋 Contenido
 
-## React Compiler
+- [Tecnologías](#tecnologías)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Arquitectura de datos](#arquitectura-de-datos)
+- [Secciones](#secciones)
+- [Instalación y uso](#instalación-y-uso)
+- [Contacto](#contacto)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Tecnología | Uso |
+|---|---|
+| React | Framework principal |
+| TypeScript | Tipado estático |
+| Context API | Gestión y distribución de datos globales |
+| CSS / HTML | Estilos y maquetación |
+| Vite | Bundler y entorno de desarrollo |
+| Git | Control de versiones |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Estructura del proyecto
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+portfolio/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── aboutMe/        ← Sección sobre mí
+│   │   ├── experience/     ← Timeline de experiencia
+│   │   ├── formContact/    ← Formulario de contacto
+│   │   ├── myInformation/  ← Hero / cabecera principal
+│   │   ├── navbar/         ← Navegación con toggle dark/light
+│   │   ├── proyects/       ← Tarjetas de proyectos
+│   │   └── skills/         ← Skills agrupados por categoría
+│   ├── context/
+│   │   └── information.tsx ← Toda la información del portfolio + Context API
+│   ├── pages/
+│   │   └── Home/           ← Página principal que compone todos los componentes
+│   ├── App.tsx
+│   └── main.tsx
+├── package.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🗂️ Arquitectura de datos
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Una de las decisiones de diseño principales de este portfolio es la **centralización de toda la información en un único archivo de contexto** (`src/context/information.tsx`), distribuido globalmente mediante la **Context API de React**.
+
+### ¿Por qué Context API?
+
+- Evita el prop drilling: ningún componente recibe datos que no le corresponden
+- Actualizar cualquier dato (experiencia, proyectos, skills) solo requiere modificar `information.tsx`
+- Separación clara entre datos y presentación
+- Escalar añadiendo nuevas secciones es inmediato
+
+### Flujo de datos
+
 ```
+information.tsx (Context + Provider)
+        │
+        ▼
+    App.tsx (envuelve todo en el Provider)
+        │
+        ▼
+    pages/Home
+        │
+        ├── components/myInformation   → useContext → myInformation
+        ├── components/navbar          → useContext → navbar
+        ├── components/aboutMe         → useContext → aboutMe
+        ├── components/skills          → useContext → skills
+        ├── components/experience      → useContext → experience
+        ├── components/proyects        → useContext → proyects
+        └── components/formContact     → useContext → (datos de contacto)
+```
+
+### Estructura del contexto
+
+```typescript
+const data = {
+  myInformation: {
+    disponibility: "Disponible para trabajar",
+    name: "Luis Mula Márquez",
+    description: "Desarrollador Full Stack · React · Spring Boot · TypeScript · Java · Angular · PHP",
+    icon: "LM",
+    experience: "2+",
+    tecnologies: "5+",
+    proyects: "1",
+    cv: "",
+    github: "https://github.com/luismm2006",
+    linkedin: "https://www.linkedin.com/in/luis-mula-márquez-73514a347/",
+  },
+  navbar: { ... },
+  aboutMe: { ... },
+  skills: {
+    frontend: { tecnologies: ["React", "Angular", "TypeScript", "JavaScript", "HTML", "CSS"] },
+    backend:  { tecnologies: ["Java", "Spring Boot", "PHP", "Python"] },
+    tools:    { tecnologies: ["Git", "Docker", "Oracle", "MySQL", "Postman"] },
+  },
+  experience: { ... },
+  proyects: { ... },
+}
+```
+
+Para añadir un nuevo proyecto basta con añadir una entrada en `data.proyects` dentro de `information.tsx` y el componente lo renderizará automáticamente.
+
+---
+
+## 📌 Secciones
+
+### myInformation (Hero)
+Presentación principal con nombre, descripción, estadísticas (años de experiencia, tecnologías, proyectos) y enlaces a GitHub y LinkedIn.
+
+### navbar
+Navegación fija con scroll suave a cada sección y toggle dark/light mode.
+
+### aboutMe
+Descripción personal, ubicación, disponibilidad y carnet de conducir.
+
+### skills
+Tecnologías agrupadas en tres categorías:
+- **Frontend:** React, Angular, TypeScript, JavaScript, HTML, CSS
+- **Backend:** Java, Spring Boot, PHP, Python
+- **Herramientas:** Git, Docker, Oracle, MySQL, Postman
+
+### experience
+Timeline con las tres experiencias profesionales:
+- Desarrollador Frontend en CaixaBank Tech *(Feb 2026 – May 2026)*
+- Desarrollador Full Stack en CaixaBank Tech *(Abr 2025 – May 2025)*
+- Soporte TI en Organismo Público de Andalucía *(Mar 2024 – Jun 2024)*
+
+### proyects
+- **ComeLoco** — Proyecto Final de Grado. Aplicación web para la gestión de pedidos en un restaurante, con panel de administración y personalización de productos. Stack: React, Spring Boot, MySQL, Docker, TypeScript, Java.
+
+### formContact
+Formulario de contacto con nombre, email y mensaje.
+
+---
+
+## ⚙️ Instalación y uso
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/luismm2006/portfolio.git
+
+# Entrar en el directorio
+cd portfolio
+
+# Instalar dependencias
+npm install
+
+# Iniciar en desarrollo
+npm run dev
+
+# Compilar para producción
+npm run build
+```
+
+---
+
+## 📬 Contacto
+
+**Luis Mula Márquez**
+- 📧 luismulamarquez@gmail.com
+- 🔗 [LinkedIn](https://www.linkedin.com/in/luis-mula-márquez-73514a347/)
+- 🐙 [GitHub](https://github.com/luismm2006)
+- 📍 Sevilla
