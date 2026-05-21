@@ -22,12 +22,12 @@ export function InformationProvider({ children }: InformationProviderProps) {
         disponibility: "Disponible para trabajar",
         name: "Luis Mula Márquez",
         description:
-          "Desarrollador Full Stack · React · Spring Boot · TypeScript · Java · Angular · PHP",
+          "React · Spring Boot · TypeScript · Java · Angular · PHP",
         icon: "LM",
-        experience: "2+",
-        tecnologies: "5+",
+        experience: "+6",
+        tecnologies: "+22",
         proyects: "1",
-        cv: "",
+        cv: "/Curriculum Luis Mula Márquez.pdf",
         github: "https://github.com/luismm2006",
         linkedin:
           "https://www.linkedin.com/in/luis-mula-márquez-73514a347/",

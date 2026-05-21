@@ -1,0 +1,10 @@
+/* ============================= */
+/* ESTILOS HOME PAGE            */
+/* ============================= */
+
+.page-section {
+  background-color: var(--bg-section);
+  min-height: 100vh;
+  width: 100%;
+}
+
