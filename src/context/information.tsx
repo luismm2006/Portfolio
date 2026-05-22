@@ -64,42 +64,46 @@ export function InformationProvider({ children }: InformationProviderProps) {
       },
       experience: {
         title: "Experiencia",
-        exp1: {
-          date: "Feb 2026 - May 2026",
-          title: "Desarrollador Frontend · CaixaBank Tech",
-          tools: ["React", "JavaScript", "Git", "Apis Rest"],
-        },
-        exp2: {
-          date: "Abr 2025 – May 2025",
-          title: "Desarrollador Full Stack · CaixaBank Tech",
-          tools: ["React", "JavaScript", "Spring Boot", "Docker", "Git", "Apis Rest"],
-        },
-        exp3: {
-          date: "Mar 2024 - Jun 2024",
-          title: "Soporte TI · Organismo Público Andalucía",
-          tools: ["Soporte técnico", "Sistemas", "Videoconferencias"],
-        },
+        exp : [
+          {
+            date: "Feb 2026 - May 2026",
+            title: "Desarrollador Frontend · CaixaBank Tech",
+            tools: ["React", "JavaScript", "Git", "Apis Rest"],
+          },
+          {
+            date: "Abr 2025 – May 2025",
+            title: "Desarrollador Full Stack · CaixaBank Tech",
+            tools: ["React", "JavaScript", "Spring Boot", "Docker", "Git", "Apis Rest"],
+          },
+          {
+            date: "Mar 2024 - Jun 2024",
+            title: "Soporte TI · Organismo Público Andalucía",
+            tools: ["Soporte técnico", "Sistemas", "Videoconferencias"],
+          }
+        ]
       },
       proyects: {
         title: "Proyectos",
-        proyect1: {
-          title: "Proyecto Final de Grado - ComeLoco",
-          image: "",
-          description:
-            "Aplicación web para la gestión de pedidos en un restaurante, con panel de administración y personalización de productos.",
-          tecnologies: [
-            "React",
-            "Spring Boot",
-            "MySQL",
-            "Docker",
-            "Git",
-            "TypeScript",
-            "Java",
-            "HTML",
-            "CSS",
-            "Postman",
-          ],
-        },
+        proyects: [
+          {
+            title: "Proyecto Final de Grado - ComeLoco",
+            image: "",
+            description:
+              "Aplicación web para la gestión de pedidos en un restaurante, con panel de administración y personalización de productos.",
+            tecnologies: [
+              "React",
+              "Spring Boot",
+              "MySQL",
+              "Docker",
+              "Git",
+              "TypeScript",
+              "Java",
+              "HTML",
+              "CSS",
+              "Postman",
+            ],
+          }
+        ],
       },
       contact: {
         title: "Contacto",
