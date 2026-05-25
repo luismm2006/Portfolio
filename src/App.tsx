@@ -1,8 +1,14 @@
 import './App.css'
+import { useEffect } from 'react'
 import { InformationProvider } from './context/information'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './pages/home/Home';
+import Home from './pages/home/home';
+
 function App() {
+  useEffect(() => {
+    // AOS deshabilitado
+  }, [])
+
   return (
     <>
       <BrowserRouter>

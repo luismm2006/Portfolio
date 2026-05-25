@@ -6,5 +6,74 @@
   background-color: var(--bg-section);
   min-height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  gap: 3rem; /* separa las secciones */
+}
+
+
+.section-card {
+  border: 1px solid #c9c9b8;
+  border-radius: 10px;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.scroll-to-nav {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  z-index: 20;
+}
+
+.scroll-to-nav.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(10px);
+}
+
+.scroll-to-nav:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+
+  max-width: 1300px;
+  width: 100%;
+  min-height: 60vh; /* centrado vertical real */
+
+  place-content: center; /* centra el grid entero */
+  align-items: center;   /* alinea AboutMe y Skills entre sí */
+}
+
+@media (max-width: 900px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    min-height: auto;
+    place-content: start;
+    align-items: start;
+  }
 }
 

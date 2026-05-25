@@ -1,7 +1,8 @@
+import "./navbar.css";
 export default function Navbar() {
   return (
     <>
-      <nav>
+      <nav id="top-nav">
         <ul>
           <li><a href="#my-information">Sobre mí</a></li>
           <li><a href="#skills">Skills</a></li>

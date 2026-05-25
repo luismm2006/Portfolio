@@ -1,0 +1,119 @@
+/* ============================= */
+/* EXPERIENCE - ESTILO LIMPIO   */
+/* ============================= */
+
+.experience-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 2rem 3rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 13.5rem;
+  align-items: center;
+}
+
+.experience-heading {
+  display: flex;
+  align-items: center;
+  padding-right: 4rem;
+}
+
+.experience-heading h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.experience-list {
+  list-style: none;
+  position: relative;
+  margin: 1rem 0 0 0;
+  padding: 0 0 0 3rem;
+}
+
+.experience-list::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 2rem;
+  width: 3px;
+  background: var(--accent-primary);
+}
+
+.experience-list li {
+  margin-bottom: 2.5rem;
+  position: relative;
+  padding: 1.5rem 1.5rem 1.5rem 2.3rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.experience-list li::before {
+  content: '';
+  position: absolute;
+  left: 0.35rem;
+  top: 1.7rem;
+  width: 14px;
+  height: 14px;
+  background: var(--accent-primary);
+  border: 3px solid var(--bg-section);
+  border-radius: 50%;
+}
+
+.experience-date {
+  font-size: 0.8rem;
+  color: var(--accent-primary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.experience-list h4 {
+  font-size: 1rem;
+  color: var(--text-main);
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.experience-list p {
+  color: rgba(148, 163, 184, 0.8);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .experience-heading {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .experience-heading h3 {
+    font-size: 2rem;
+  }
+
+  .experience-list {
+    padding-left: 0;
+  }
+
+  .experience-list::before {
+    left: 1rem;
+  }
+
+  .experience-list li::before {
+    left: 0.15rem;
+  }
+}

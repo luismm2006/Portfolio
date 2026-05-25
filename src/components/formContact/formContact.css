@@ -1,0 +1,88 @@
+/* ============================= */
+/* ESTILOS FORMULARIO CONTACTO  */
+/* ============================= */
+
+.form-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-contact h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-inputs input,
+.form-inputs textarea {
+  padding: 1rem;
+  background-color: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-inputs input::placeholder,
+.form-inputs textarea::placeholder {
+  color: rgba(148, 163, 184, 0.6);
+}
+
+.form-inputs input:focus,
+.form-inputs textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+.form-inputs textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.form-actions span {
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.form-actions button {
+  padding: 0.75rem 2rem;
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-actions button:hover {
+  background-color: rgba(99, 102, 241, 0.8);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+}
+
+.form-actions button:active {
+  transform: translateY(0);
+}

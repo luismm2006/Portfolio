@@ -1,37 +1,46 @@
 import { useInformation } from "../../context/information";
-
+import "./skills.css";
 export default function Skills() {
-  const {info} = useInformation();
+  const { info } = useInformation();
   if (!info) return <p>Cargando...</p>;
+
   return (
-    <>
-      <div>
-        <h3>{info.skills.title}</h3>
-        <div>
-          <h4>{info.skills.frontend.title}</h4>
+    <div className="skills-wrapper">
+      <h3>{info.skills.title}</h3>
+
+      <div className="skills-grid">
+
+        {/* FRONTEND */}
+        <div className="skills-card skills-card--frontend">
+          <h4 className="skills-card-title">{info.skills.frontend.title}</h4>
+          <div className="skills-badges">
+            {info.skills.frontend.tecnologies.map((skill: string) => (
+              <span key={skill} className="skills-badge">{skill}</span>
+            ))}
+          </div>
         </div>
-        <ul>
-          {info.skills.frontend.tecnologies.map((skill: string, index: number) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
-        <div>
-          <h4>{info.skills.backend.title}</h4>
+
+        {/* BACKEND */}
+        <div className="skills-card skills-card--backend">
+          <h4 className="skills-card-title">{info.skills.backend.title}</h4>
+          <div className="skills-badges">
+            {info.skills.backend.tecnologies.map((skill: string) => (
+              <span key={skill} className="skills-badge">{skill}</span>
+            ))}
+          </div>
         </div>
-        <ul>
-          {info.skills.backend.tecnologies.map((skill: string, index: number) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
-        <div>
-          <h4>{info.skills.tools.title}</h4>
+
+        {/* TOOLS */}
+        <div className="skills-card skills-card--tools">
+          <h4 className="skills-card-title">{info.skills.tools.title}</h4>
+          <div className="skills-badges">
+            {info.skills.tools.tecnologies.map((skill : string)  => (
+              <span key={skill} className="skills-badge">{skill}</span>
+            ))}
+          </div>
         </div>
-        <ul>
-          {info.skills.tools.tecnologies.map((skill: string, index: number) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
+
       </div>
-    </>
+    </div>
   );
 }

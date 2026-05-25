@@ -1,0 +1,97 @@
+/* ============================= */
+/* ABOUT ME — ESTILO PREMIUM     */
+/* ============================= */
+
+.about-wrapper {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 0;
+  margin: 0;
+  color: var(--text-main);
+}
+
+/* TÍTULO */
+.about-wrapper h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: center;
+}
+
+/* DESCRIPCIÓN */
+.about-wrapper p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: rgba(240, 242, 255, 0.92);
+  margin: 0;
+
+  /* mejora visual */
+  padding-left: 0.2rem;
+  border-left: 3px solid rgba(255, 255, 255, 0.12);
+  padding-left: 1rem;
+}
+
+/* BADGES — AHORA EN COLUMNA, MÁS ELEGANTES */
+.about-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* CADA ITEM */
+.about-badges span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.9rem 1.2rem;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 500;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.25s ease;
+
+  /* sombra suave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* HOVER */
+.about-badges span:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--accent-primary);
+  transform: translateX(6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* ICONOS */
+.about-badges span::first-letter {
+  font-size: 1.3rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .about-wrapper {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-wrapper p {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .about-badges {
+    align-items: center;
+  }
+
+  .about-badges span {
+    justify-content: center;
+  }
+}
