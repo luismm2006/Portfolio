@@ -34,6 +34,7 @@ Portfolio personal desarrollado en **React + TypeScript**, con toda la informaci
 portfolio/
 ├── public/
 ├── src/
+│   ├── assets/             ← Almacenamiento de elementos multimedia
 │   ├── components/
 │   │   ├── aboutMe/        ← Sección sobre mí
 │   │   ├── experience/     ← Timeline de experiencia
@@ -46,6 +47,7 @@ portfolio/
 │   │   └── information.tsx ← Toda la información del portfolio + Context API
 │   ├── pages/
 │   │   └── Home/           ← Página principal que compone todos los componentes
+|   |       └── hooks/      ← Hooks customs para quitar lógica cargante de la página principal
 │   ├── App.tsx
 │   └── main.tsx
 ├── package.json
