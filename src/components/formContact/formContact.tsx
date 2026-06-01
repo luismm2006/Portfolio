@@ -6,7 +6,7 @@ export default function FormContact() {
   if (!info) return <p>Cargando...</p>;
   
   return (
-    <form className="form-contact">
+    <form id="contact" className="form-contact">
       <h3>{info.contact.title}</h3>
       <div className="form-inputs">
         <input type="text" placeholder="Tu nombre" />

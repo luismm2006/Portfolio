@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react"
-
+import Imagen_Proyecto_ComeLoco from "../assets/Imagen Proyecto ComeLoco.png";
+import Imagen_Proyecto_Portfolio from "../assets/Imagen Proyecto Portfolio.png";
 const InformationContext = createContext<any | null>(null);
 
 export function useInformation() {
@@ -83,37 +84,86 @@ export function InformationProvider({ children }: InformationProviderProps) {
         ]
       },
       proyects: {
-        title: "Proyectos",
-        proyects: [
-          {
-            title: "Proyecto Final de Grado - ComeLoco",
-            image: "",
-            description:
-              "Aplicación web para la gestión de pedidos en un restaurante, con panel de administración y personalización de productos.",
-            tecnologies: [
-              "React",
-              "Spring Boot",
-              "MySQL",
-              "Docker",
-              "Git",
-              "TypeScript",
-              "Java",
-              "HTML",
-              "CSS",
-              "Postman",
-            ],
-          }, 
-          {
-            title: "",
-            image: "",
-            description:
-              "",
-            tecnologies: [
-              
-            ],
+      title: "Proyectos",
+      proyects: [
+        {
+          title: "Proyecto Final de Grado - ComeLoco",
+          image: Imagen_Proyecto_ComeLoco,
+          description:
+            "Aplicación web para la gestión de pedidos en un restaurante, con panel de administración y personalización de productos.",
+          tecnologies: {
+            frontend: {
+              title: "Frontend",
+              items: ["React", "CSS", "HTML", "TypeScript"]
+            },
+            backend: {
+              title: "Backend",
+              items: ["Spring Boot", "Java"]
+            },
+            database: {
+              title: "Base de Datos",
+              items: ["MySQL"]
+            },
+            tools: {
+              title: "Herramientas",
+              items: ["Docker", "GitHub", "Postman", "Vercel", "Render", "Aiven"]
+            }
+          },
+          deployment : {
+            title: "Despliegue aplicación",
+            app: "https://proyecto-final-lmm-front-end.vercel.app",
+            github: {
+              frontend : {
+                title: "Repositorio Frontend",
+                url: "https://github.com/luismm2006/ProyectoFinalLMMFrontEnd",
+              },
+              backend : {
+                title: "Repositorio Backend",
+                url: "https://github.com/luismm2006/ProyectoFinalLMMBackEnd",
+              }
+            }
           }
-        ],
-      },
+        },
+        {
+          title: "Proyecto Portfolio Personal",
+          image: Imagen_Proyecto_Portfolio,
+          description: "Portfolio personal desarrollado con React y TypeScript, diseñado para mostrar mi experiencia, habilidades y proyectos de manera profesional y atractiva.",
+          tecnologies: {
+            frontend: {
+              title: "Frontend",
+              items: ["React", "TypeScript", "CSS", "HTML"]
+            },
+            backend: {
+              title: "Backend",
+              items: []
+            },
+            database: {
+              title: "Base de Datos",
+              items: []
+            },
+            tools: {
+              title: "Herramientas",
+              items: ["GitHub", "Vercel"]
+            }
+          },
+          deployment : {
+            title: "Despliegue aplicación",
+            app: "a",
+            github: {
+              frontend : {
+                title: "Repositorio Frontend",
+                url: "a",
+              },
+              backend : {
+                title: "",
+                url: "",
+              }
+            }
+          }
+        }
+      ]
+    },
+
       contact: {
         title: "Contacto",
         email: "luismulamarquez@gmail.com",

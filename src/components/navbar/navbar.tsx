@@ -4,7 +4,7 @@ export default function Navbar() {
     <>
       <nav id="top-nav">
         <ul>
-          <li><a href="#my-information">Sobre mí</a></li>
+          <li><a href="#about-me">Sobre mí</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experiencia</a></li>
           <li><a href="#projects">Proyectos</a></li>

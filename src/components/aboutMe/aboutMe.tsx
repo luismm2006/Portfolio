@@ -5,7 +5,7 @@ export default function AboutMe() {
   if (!info) return <p>Cargando...</p>;
 
   return (
-    <div className="about-wrapper">
+    <section id="about-me" className="about-wrapper">
       <h3>{info.aboutMe.title}</h3>
 
       <p>{info.aboutMe.description}</p>
@@ -15,7 +15,6 @@ export default function AboutMe() {
         <span>🚗 {info.aboutMe.drivingLicense}</span>
         <span>✔ {info.aboutMe.disponibility}</span>
       </div>
-    </div>
-
+    </section>
   );
 }

@@ -6,7 +6,7 @@ export default function Experience() {
   if (!info) return <p>Cargando...</p>;
 
   return (
-    <div className="experience-wrapper">
+    <div id="experience" className="experience-wrapper">
       <div className="experience-grid">
         <div className="experience-heading">
           <h3>{info.experience.title}</h3>

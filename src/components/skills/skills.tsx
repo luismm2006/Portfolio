@@ -5,7 +5,7 @@ export default function Skills() {
   if (!info) return <p>Cargando...</p>;
 
   return (
-    <div className="skills-wrapper">
+    <div id="skills" className="skills-wrapper">
       <h3>{info.skills.title}</h3>
 
       <div className="skills-grid">
