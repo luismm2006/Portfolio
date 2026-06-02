@@ -166,7 +166,7 @@ export function InformationProvider({ children }: InformationProviderProps) {
 
       contact: {
         title: "Contacto",
-        email: "luismulamarquez@gmail.com",
+        email: "luismula06@gmail.com",
       },
     };
 
