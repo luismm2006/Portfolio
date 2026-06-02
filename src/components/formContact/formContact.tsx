@@ -73,13 +73,13 @@ export default function FormContact() {
       </div>
 
       <div className="form-actions">
-        <button type="submit">Enviar Mensaje</button>
         <div className="contact-info">
           <p>También puedes escribir directamente a:</p>
           <a className="contact-email" href={`mailto:${info.contact.email}`}>
             {info.contact.email}
           </a>
         </div>
+        <button type="submit">Enviar Mensaje</button>
       </div>
     </form>
   );
