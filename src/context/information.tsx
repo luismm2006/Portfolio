@@ -148,7 +148,7 @@ export function InformationProvider({ children }: InformationProviderProps) {
           },
           deployment : {
             title: "Despliegue aplicación",
-            app: "https://portfolio-luis-projects-9786b6f0.vercel.app",
+            app: "https://portfolio-ochre-sigma-a8gwlfkrag.vercel.app/",
             github: {
               frontend : {
                 title: "Repositorio Frontend",
