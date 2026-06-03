@@ -148,11 +148,11 @@ export function InformationProvider({ children }: InformationProviderProps) {
           },
           deployment : {
             title: "Despliegue aplicación",
-            app: "a",
+            app: "https://portfolio-luis-projects-9786b6f0.vercel.app",
             github: {
               frontend : {
                 title: "Repositorio Frontend",
-                url: "a",
+                url: "https://github.com/luismm2006/Portfolio",
               },
               backend : {
                 title: "",
