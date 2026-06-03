@@ -131,3 +131,49 @@
 .form-actions button:active {
   transform: translateY(0);
 }
+
+@media (max-width: 768px) {
+  .form-contact {
+    padding: 2rem 1.25rem;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .form-contact h3 {
+    text-align: center;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+
+  .contact-info {
+    text-align: center;
+    width: 100%;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-contact {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-inputs {
+    gap: 1rem;
+  }
+
+  .form-inputs input,
+  .form-inputs textarea {
+    padding: 0.95rem;
+  }
+
+  .form-actions button {
+    padding: 0.85rem 1rem;
+  }
+}

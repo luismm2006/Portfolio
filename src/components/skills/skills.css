@@ -40,6 +40,30 @@
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
+@media (max-width: 768px) {
+  .skills-wrapper {
+    padding: 4rem 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .skills-card {
+    align-items: center;
+    text-align: center;
+    padding: 1.75rem;
+  }
+
+  .skills-badges {
+    justify-content: center;
+  }
+}
+
+
 .skills-card:hover {
   transform: translateY(-6px);
   border-color: var(--accent-primary);

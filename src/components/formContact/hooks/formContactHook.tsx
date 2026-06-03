@@ -41,7 +41,7 @@ export default function formContactHook() {
         if (!formData.email.trim()) {
         newErrors.email = "El correo electrónico es obligatorio.";
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-        newErrors.email = "Introduce un email válido.";
+        newErrors.email = "Introduce un email válido. Ejemplo: usuario@gmail.com";
         }
 
         if (!formData.message.trim()) {

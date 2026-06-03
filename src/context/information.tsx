@@ -27,7 +27,7 @@ export function InformationProvider({ children }: InformationProviderProps) {
         icon: "LM",
         experience: "+6",
         tecnologies: "+22",
-        proyects: "1",
+        proyects: "2",
         cv: "/Curriculum Luis Mula Márquez.pdf",
         github: "https://github.com/luismm2006",
         linkedin:
@@ -45,7 +45,7 @@ export function InformationProvider({ children }: InformationProviderProps) {
         description:
           "Desarrollador Full Stack con formación en DAW y experiencia real en CaixaBank Tech. Apasionado por crear interfaces limpias y backends robustos. Busco mi primera oportunidad para seguir creciendo en un equipo con retos reales.",
         location: "Sevilla",
-        drivingLicense: "Carnet propio",
+        drivingLicense: "Carnet de conducir",
         disponibility: "Disponible para trabajar",
       },
       skills: {

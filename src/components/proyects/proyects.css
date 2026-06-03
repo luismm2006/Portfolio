@@ -299,4 +299,284 @@
   margin: 0;
 }
 
+/* ============================= */
+/* CARRUSEL MÓVIL                */
+/* ============================= */
+
+.proyects-carousel {
+  display: none;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.carousel-slide {
+  width: 100%;
+  min-height: 100%;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  background: rgba(99, 102, 241, 0.15);
+  color: rgba(99, 102, 241, 1);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.carousel-btn:hover,
+.carousel-btn:active {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: rgba(99, 102, 241, 0.6);
+  transform: scale(1.08);
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: rgba(99, 102, 241, 1);
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* ============================= */
+/* RESPONSIVE                    */
+/* ============================= */
+
+@media (max-width: 1024px) {
+  .proyects-wrapper {
+    padding: 3rem 2rem;
+  }
+
+  .proyects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .proyects-title h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .proyects-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .proyects-grid {
+    display: none;
+  }
+
+  .proyects-carousel {
+    display: block;
+  }
+
+  .proyects-title h3 {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-card {
+    border-radius: 12px;
+  }
+
+  .project-image {
+    height: 240px;
+    flex: 0 0 240px;
+  }
+
+  .project-content {
+    padding: 1.2rem;
+    gap: 0.8rem;
+  }
+
+  .project-content > h4:not(.tech-category-title) {
+    font-size: 1rem;
+  }
+
+  .project-card:not(.project-card--empty) p {
+    font-size: 0.85rem;
+  }
+
+  .project-tech-groups {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .tech-category {
+    padding: 0.8rem 1rem;
+  }
+
+  .tech-category-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .tech-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .deployment-block {
+    padding: 1rem 1.2rem;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .deployment-icon,
+  .github-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .deployment-link {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .carousel-dot.active {
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyects-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .proyects-title h3 {
+    font-size: 1.4rem;
+  }
+
+  .carousel-controls {
+    gap: 1rem;
+  }
+
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+
+  .carousel-indicators {
+    gap: 0.6rem;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .carousel-dot.active {
+    width: 18px;
+  }
+
+  .project-image {
+    height: 200px;
+    flex: 0 0 200px;
+  }
+
+  .project-content {
+    padding: 1rem;
+    gap: 0.6rem;
+  }
+
+  .project-content > h4:not(.tech-category-title) {
+    font-size: 0.95rem;
+  }
+
+  .project-card:not(.project-card--empty) p {
+    font-size: 0.8rem;
+  }
+
+  .project-tech-groups {
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .tech-category {
+    padding: 0.7rem 0.9rem;
+  }
+
+  .tech-category-title {
+    font-size: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .tech-tag {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+  }
+
+  .deployment-block {
+    padding: 0.9rem 1rem;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .deployment-title,
+  .repo-title {
+    font-size: 0.8rem;
+  }
+
+  .deployment-icon,
+  .github-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .deployment-link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+
 
