@@ -1,7 +1,7 @@
 import './App.css'
 import { InformationProvider } from './context/information'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './pages/home/home';
+import Home from './pages/home/home.tsx';
 
 function App() {
   return (
