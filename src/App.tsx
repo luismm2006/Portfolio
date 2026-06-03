@@ -1,7 +1,8 @@
 import './App.css'
 import { InformationProvider } from './context/information'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from './pages/home/home.tsx';
+import HomePage from './pages/home/homePage';
+
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <BrowserRouter>
         <InformationProvider>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
           </Routes>
         </InformationProvider>
       </BrowserRouter>

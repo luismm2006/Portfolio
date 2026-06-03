@@ -5,10 +5,10 @@ import FormContact from "../../components/formContact/formContact";
 import MyInformation from "../../components/myInformation/myInformation";
 import Proyects from "../../components/proyects/proyects";
 import Skills from "../../components/skills/skills";
-import "./home.css";
+import "./homePage.css";
 import arrowUp from "./hooks/arrowUp";
 
-export default function Home() {
+export default function HomePage() {
   const { showScrollToNav } = arrowUp();
 
   return (
