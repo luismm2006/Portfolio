@@ -1,6 +1,6 @@
 import { useInformation } from "../../context/information";
 import { useCarousel } from "./hooks/useCarousel";
-import "./proyects.css";
+import "./projects.css";
 import GithubLogo from "../../assets/Logo github.png";
 import VercelLogo from "../../assets/logo-vercel.svg";
 
@@ -31,10 +31,10 @@ type Deployment = {
   };
 };
 
-export default function Proyects() {
+export default function Projects() {
   const {info} = useInformation();
   
-  const filteredProjects = info?.proyects.proyects.filter(
+  const filteredProjects = info?.projects.projects.filter(
     (project: { title: string; description: string; tecnologies: Tecnologies; image: string; deployment: Deployment }) =>
       project.title ||
       project.description ||
@@ -50,13 +50,13 @@ export default function Proyects() {
   if (!info) return <p>Cargando...</p>;
   
   return (
-    <div id="projects" className="proyects-wrapper">
-      <div className="proyects-title">
-        <h3>{info.proyects.title}</h3>
+    <div id="projects" className="projects-wrapper">
+      <div className="projects-title">
+        <h3>{info.projects.title}</h3>
       </div>
       
-      <div className="proyects-grid">
-        {info.proyects.proyects.map(({ title, description, tecnologies, image, deployment } : { title: string; description: string; tecnologies: Tecnologies; image: string; deployment: Deployment }, index: number) => {
+      <div className="projects-grid">
+        {info.projects.projects.map(({ title, description, tecnologies, image, deployment } : { title: string; description: string; tecnologies: Tecnologies; image: string; deployment: Deployment }, index: number) => {
           const isEmptyProject = !title && !description && tecnologies.frontend.items.length === 0 && tecnologies.backend.items.length === 0 && tecnologies.database.items.length === 0 && tecnologies.tools.items.length === 0 && !image;
 
           return (
@@ -166,7 +166,7 @@ export default function Proyects() {
 
       {/* Carrusel para móvil */}
       {filteredProjects.length > 0 && (
-        <div className="proyects-carousel">
+        <div className="projects-carousel">
           <div className="carousel-container">
             <div className="carousel-slide">
               {filteredProjects[carousel.currentIndex] && (

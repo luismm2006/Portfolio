@@ -3,10 +3,10 @@ import AboutMe from "../../components/aboutMe/aboutMe";
 import Experience from "../../components/experience/experience";
 import FormContact from "../../components/formContact/formContact";
 import MyInformation from "../../components/myInformation/myInformation";
-import Proyects from "../../components/proyects/proyects";
 import Skills from "../../components/skills/skills";
 import "./homePage.css";
 import arrowUp from "./hooks/arrowUp";
+import Projects from "../../components/projects/projects";
 
 export default function HomePage() {
   const { showScrollToNav } = arrowUp();
@@ -21,7 +21,7 @@ export default function HomePage() {
           <Skills />
         </div>
         <Experience />
-        <Proyects />
+        <Projects />
         <FormContact />
       </section>
       <a

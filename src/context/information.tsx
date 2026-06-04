@@ -27,7 +27,7 @@ export function InformationProvider({ children }: InformationProviderProps) {
         icon: "LM",
         experience: "+6",
         tecnologies: "+22",
-        proyects: "2",
+        projects: "2",
         cv: "/Curriculum Luis Mula Márquez.pdf",
         github: "https://github.com/luismm2006",
         linkedin:
@@ -37,7 +37,7 @@ export function InformationProvider({ children }: InformationProviderProps) {
         aboutMy: "Sobre mí",
         skills: "Skills",
         experience: "Experiencia",
-        proyects: "Proyectos",
+        projects: "Proyectos",
         contact: "Contacto",
       },
       aboutMe: {
@@ -83,9 +83,9 @@ export function InformationProvider({ children }: InformationProviderProps) {
           }
         ]
       },
-      proyects: {
+      projects: {
       title: "Proyectos",
-      proyects: [
+      projects: [
         {
           title: "Proyecto Final de Grado - ComeLoco",
           image: Imagen_Proyecto_ComeLoco,
