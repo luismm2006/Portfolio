@@ -41,7 +41,7 @@ portfolio/
 │   │   ├── formContact/    ← Formulario de contacto
 │   │   ├── myInformation/  ← Hero / cabecera principal
 │   │   ├── navbar/         ← Navegación con toggle dark/light
-│   │   ├── proyects/       ← Tarjetas de proyectos
+│   │   ├── projects/       ← Tarjetas de proyectos
 |   |       └── hooks/      ← Hooks customs para quitar lógica cargante de la página principal o hacer contenido reutilizable/escalable
 │   │   └── skills/         ← Skills agrupados por categoría
 │   ├── context/
@@ -84,7 +84,7 @@ information.tsx (Context + Provider)
         ├── components/aboutMe         → useContext → aboutMe
         ├── components/skills          → useContext → skills
         ├── components/experience      → useContext → experience
-        ├── components/proyects        → useContext → proyects
+        ├── components/projects        → useContext → projects
         └── components/formContact     → useContext → (datos de contacto)
 ```
 
@@ -244,7 +244,7 @@ const data = {
     };
 ```
 
-Para añadir un nuevo proyecto basta con añadir una entrada en `data.proyects` dentro de `information.tsx` y el componente lo renderizará automáticamente.
+Para añadir un nuevo proyecto basta con añadir una entrada en `data.projects` dentro de `information.tsx` y el componente lo renderizará automáticamente.
 
 ---
 
@@ -271,7 +271,7 @@ Timeline con las tres experiencias profesionales:
 - Desarrollador Full Stack en CaixaBank Tech *(Abr 2025 – May 2025)*
 - Soporte TI en Organismo Público de Andalucía *(Mar 2024 – Jun 2024)*
 
-### proyects
+### projects
 - **ComeLoco** — Proyecto Final de Grado. Aplicación web para la gestión de pedidos en un restaurante, con panel de administración y personalización de productos. Stack: React, Spring Boot, MySQL, Docker, TypeScript, Java.
 - **Portfolio** — Portfolio personal desarrollado con React y TypeScript, diseñado para mostrar mi experiencia, habilidades y proyectos de manera profesional y atractiva.
 ### formContact
