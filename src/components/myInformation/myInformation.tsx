@@ -61,7 +61,7 @@ export default function MyInformation() {
             <p>Tecnologías/Herramientas</p>
           </div>
           <div className="hero-stat">
-            <h2>{info.myInformation.proyects}</h2>
+            <h2>{info.myInformation.projects}</h2>
             <p>Proyectos</p>
           </div>
         </div>
