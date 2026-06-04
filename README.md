@@ -84,7 +84,7 @@ information.tsx (Context + Provider)
         ├── components/aboutMe         → useContext → aboutMe
         ├── components/skills          → useContext → skills
         ├── components/experience      → useContext → experience
-        ├── components/projects        → useContext → proyects
+        ├── components/projects        → useContext → projects
         └── components/formContact     → useContext → (datos de contacto)
 ```
 
